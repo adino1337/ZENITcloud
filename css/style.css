@@ -1,0 +1,834 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700
+);
+:root{
+    --white: #ffffff;
+    --tirkisova: #00BCD4;
+    --siva: #6A6A6a;
+    --black: #1e1e1e;
+    --secBG: #F7f7f7;
+    --hover: #00a4b9;
+    --prechodA: #7202bb;
+    --prechodB: #3264f5;
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid var(--siva);
+    z-index: 1000;
+}
+.scroll{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background-color: white;    
+    border-bottom: none;
+}
+
+nav{
+    width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    color: white;
+}
+.scroll .logo{color: black;}
+.logo h4{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 5px;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+}
+
+.rightSide{
+    display: flex;    
+}
+.links{
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+.links a{
+    text-decoration: none;
+    color: var(--white);
+    margin: 5px 10px;    
+}
+
+.scroll .links a {color: black;}
+
+.activeLink{
+    color: var(--tirkisova) !important;
+}
+
+.navButtons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.navButtons button{
+    width: 120px;
+    padding: 10px;  
+      
+}
+.navButtons .login{
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    
+
+}
+.scroll .navButtons .login{border: 2px solid var(--tirkisova); color: var(--tirkisova);}
+.navButtons .login:hover{
+    background-color: var(--white);
+    border: 2px solid var(--white);
+    color: var(--tirkisova);
+}
+.scroll .navButtons .login:hover
+{border: 2px solid var(--hover); color: var(--white); background-color: var(--hover);}
+
+
+.navButtons .register{    
+    background-color: var(--tirkisova);
+    color: var(--white);
+    border: 2px solid var(--tirkisova);
+}
+.navButtons .register:hover{
+    background-color: var(--hover);
+    color: var(--white);
+    border: 2px solid var(--hover);
+}
+
+.uvodMain{ 
+    width: 90%;   
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.uvodMain h1{
+    color: white;
+    width: 100%;   
+    margin: 0;
+    text-align: center;
+
+}
+.searchBar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.containerDomena{
+    width: 100%;
+    background-image: url(../images/banner-bg.jpg);    
+    height: 80vh;    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.domenaForm{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.domenaForm input[type="text"]{
+    width: 75%;
+    background-color: transparent;
+    padding: 2px 10px;
+    outline: none;
+    border: 1px solid white;
+}
+.domenaForm input::placeholder{color: rgb(223, 219, 219);}
+
+.domenaForm input:focus{border-width: 2px;}
+.domenaForm button{
+    width: 20%;
+    padding: 10px;
+    background-color: var(--tirkisova);
+    color: var(--white);
+    border: 2px solid var(--tirkisova);
+
+}
+.checkboxes{
+    display: flex;
+    justify-content: center;
+}
+.checkboxes div{
+    display: flex;
+}
+.checkboxes input{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+.checkboxes label{
+    margin-left: 10px;
+    color: white;
+}
+
+.karty{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 50px;
+}
+
+.sluzby{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+.configuration{
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+.karta{
+    background-color: var(--secBG);
+    width: 25%;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.normal{
+    background-color: var(--tirkisova);
+    color: var(--white);
+    border: 2px solid var(--tirkisova);
+}
+
+.fancy{
+    background: linear-gradient(to right bottom, var(--prechodA), var(--prechodB));
+    color: var(--white);
+    border: none;
+}
+.card i {
+    color: var(--prechodA);
+    margin-right: 10px;
+}
+.fancy:hover{
+    background: linear-gradient(to right bottom, var(--prechodB), var(--prechodA));
+    color: var(--white);
+    border: none;
+}
+.normal:hover{
+    background-color: var(--hover);
+    color: var(--white);
+    border: 2px solid var(--hover);
+}
+.vyber{
+    width: 130px;
+    height: 30px;
+    padding: 10px;    
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ikon{
+    background-color: var(--tirkisova);
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.ikon i{
+    font-size: 42px;
+}
+.cena{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tirkisova);
+    padding: 35px 40px;
+}
+.cards{
+    display: flex;
+justify-content: space-between;}
+.card{
+    position: relative;
+    width: 24%;
+    padding: 20px 40px;
+    padding-bottom: 50px;
+    box-shadow: 0px 0px 10px 0 rgb(177, 177, 177);
+    background-color: white;
+}
+.cena h2,h5{
+    margin: 0;
+    color: white;
+}
+
+.card h3{
+    text-align: center;
+}
+.sluzbaIcon{
+    display: flex;
+    text-align: center;    
+}
+.sluzbaIcon i{
+    display: flex;
+    align-items: center;
+}
+.fancyBG{
+    background: linear-gradient(to bottom right, var(--prechodA), var(--prechodB)) !important;
+}
+.this{
+    width: 200px;
+    text-align: center;
+    color: var(--siva);
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+
+.this::after{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
+}
+
+.popis{
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+width: 100%;
+    box-sizing: border-box;
+}
+.login, .register{
+    cursor: pointer;
+}
+.konfiguraciaContainer{
+    background-image: url(../images/pricing-bg.jpg);
+    background-position: top;    
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+    padding-bottom: 150px;
+}
+
+.loginContainer{
+    background-image: url(../images/heading-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 30px;
+}
+
+.loginForm form input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+
+}
+.table{
+    overflow-x: scroll;
+    
+}
+.loginForm button{
+    width: 120px;
+    height: 40px;
+    background-color: var(--tirkisova);
+    color: white;
+    border: none;
+}
+.loginForm form{   
+    display: block;
+}
+
+.napisali{
+text-align: center;
+background-color: #f7f7f7;
+padding: 100px 0;
+min-height: 500px;
+
+}
+.napisaliContainer{
+    position: relative;
+}
+.napisali .blue{
+    color: var(--tirkisova);
+    font-weight: 700;
+    margin: 5px 0;
+    font-size: 14px;
+}
+.napisali h1{
+    margin-top: 10px;
+}
+.napisali .quotation{
+    background: linear-gradient(to bottom right, var(--prechodA), var(--prechodB));
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    color: white;
+    display: grid;
+    place-items: center;
+    margin: 80px auto 40px auto;
+}
+.napisali h3{
+    margin: 40px 0 0 0;
+    
+}
+.napisali .textqua{
+    margin: 0 auto;
+    max-width: 750px;
+    line-height: 32px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--siva);
+
+}
+.circles{
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    padding-top: 50px;
+    max-width: fit-content;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+    
+.circles div{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--tirkisova);
+    opacity: 0.5;
+    cursor: pointer;
+}
+.circles .activeSpan{
+    opacity: 1;
+}
+footer{
+    background-image: url(../images/footer-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    color: white;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    padding-bottom: 80px;
+}
+.wrapper h4{
+    margin-bottom: 50px;
+}
+.wrapper .konf{
+    width: 25%;
+}
+.wrapper .kontakty{
+    width: 25%;
+}
+.wrapper .onas{
+    width: 50%;
+}
+
+.kontakty span{
+    font-weight: 500;
+}
+.kontakty p{
+    display: flex;
+    gap: 10px;
+}
+
+.gray{
+    font-weight: 200;
+    color: white;
+}
+
+footer .icons{
+    font-size: 32px;
+    display: flex;
+    gap: 20px;
+}
+
+.middle{
+    padding: 70px;
+    text-align: center;
+    margin: 0;
+}
+.table{
+    width: 100%;
+    padding: 100px 0;
+    background-color: #f7f7f7;
+}
+.table table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    width: fit-content;
+    text-align: center;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .table .link{    
+    text-align: center;
+  }
+  .table a{
+    color: red;
+  }
+  
+  .modal{
+    z-index: 500;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 0px 15px 0px var(--siva);
+    text-align: center;
+  }
+
+  
+  
+  .modal .buttonOK{
+    background-color: var(--tirkisova);
+    font-size: 14px;
+    padding: 10px 0px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+  }
+  .modal h1{  
+    margin: 40px 0 10px 0;
+  }
+  .modal h3{
+    margin: 0;
+  }
+  .modal p{
+    margin-bottom: 40px;
+  }
+
+  .modal .fajka{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: var(--tirkisova);
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .modal .fajka i{
+    font-size: 36px;
+    font-weight: 100;
+    color: white;
+  }
+
+  .activeH4{
+    color: var(--tirkisova);
+  }
+  .aboutContainer{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 80px;
+    padding: 100px 0;
+  }
+  .aboutContainer > div{
+    width: 50%;
+  }
+  .aboutContainer img{
+    width: 100%;
+    height: auto;
+  }
+  .aboutContainer h5{
+    color: var(--tirkisova);
+  }
+  .aboutContainer p{
+    color: var(--siva);
+  }
+  .aboutPassive{
+    display: none;
+  }
+  .aboutActive{
+    display: block !important;
+  }
+  #historyBTN,
+  #futureBTN{
+    cursor: pointer;
+    margin-top: 0;
+  }
+  .line{
+    margin: 50px 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 50px;
+    margin-top: 100px;
+  }
+
+  .kartaSluzby{
+    background-color: var(--secBG);
+    text-align: center;
+    padding: 50px 20px;
+}
+.kartaSluzby .ikon i{
+    font-size: 32px;
+}
+.kartaSluzby h3{
+    margin: 32px 0;
+}
+.contactIcons .ikon{
+    width: 60px !important  ;
+    height: 60px;
+    margin: 0;
+}
+.contactIcons .ikon i{
+    font-size: 22px;
+}
+
+.contactIcons{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-top: 0px;
+    gap: 20px 0;
+    width: 100%;
+  }
+.contactIcons > div{
+    display: flex;
+}
+
+.contactIcons span{
+    margin: auto 0;
+    margin-left: 10px;
+}
+
+.contactForm form button{
+    width: 160px;
+    padding: 15px 10px;   
+    background-color: var(--tirkisova);
+    color: var(--white);
+    border: 2px solid var(--tirkisova);
+}
+.contactForm form button:hover{
+    background-color: var(--hover);
+    color: var(--white);
+    border: 2px solid var(--hover);
+}
+
+.contactForm form input,
+.contactForm form textarea{
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.activeSlide{
+    display: block !important;
+}
+.passiveSlide{
+    display: none;
+}
+
+
+@media screen and (max-width: 1099px) {
+    .karty{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+    .karta{
+        margin: auto;
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+    .card{
+        margin: auto;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+    }
+    .card{
+        margin: auto;
+        width: 90%;
+        max-width: 300px;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+    }
+    .kontakty,
+    .onas,
+    .konf{
+        width: 80% !important;
+        text-align: center;
+    }
+    .gray,
+    .icons{
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        width: 100%;
+        padding: 20px 20px;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        
+    }
+
+    .sluzbyKontainer{
+        padding: 50px;
+        box-sizing: border-box;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 45%);       
+      }
+    
+}
+@media screen and (max-width: 850px) {
+    .aboutContainer{
+        display: block;
+        width: 100%;
+    }
+.aboutContainer .img{
+    display: none;
+}
+.aboutContainer > div{
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+}
+@media screen and (max-width: 600px) {
+    .rightSide{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .popis{padding: 50px 10px;}
+    .links{margin-right: 0;}
+    .logo h1,.logo h4{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    nav{
+        gap: 5px;
+    }
+.grid{
+    grid-template-columns: repeat(1, 100%);
+   
+  }
+  .contactIcons{
+  grid-template-columns: repeat(1, 100%);
+}
+.searchBar{
+    gap: 20px;
+    flex-direction: column;
+}
+
+.searchBar input[type="text"], .searchBar button{
+    width: auto;
+    padding: 10px !important;
+    
+}
+.uvodMain h1{
+    padding-top: 50px;
+}
+.loginContainer{
+    padding-top: 200px;
+}
+}
